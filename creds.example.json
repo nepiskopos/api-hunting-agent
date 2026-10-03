@@ -1,0 +1,15 @@
+{
+  "target": "http://localhost:8888",
+  "accounts": [
+    {
+      "label": "primary",
+      "email": "agent.primary@example.com",
+      "password": "ChangeMe123!"
+    },
+    {
+      "label": "secondary",
+      "email": "agent.secondary@example.com",
+      "password": "ChangeMe123!"
+    }
+  ]
+}

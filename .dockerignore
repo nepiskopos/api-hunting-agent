@@ -1,0 +1,11 @@
+.env
+creds.json
+tests/
+__pycache__/
+*.pyc
+.venv/
+findings.json
+run.log
+summary.md
+report.md
+.git/

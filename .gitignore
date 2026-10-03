@@ -1,0 +1,48 @@
+# Never commit real credentials or secrets. The ``*.example`` templates
+# (creds.example.json, .env.example) ARE committed -- they are the
+# placeholders a cloner copies from, so .env.example is re-included below.
+creds.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Run artifacts from ad-hoc local testing (the committed run's
+# findings.json / run.log / summary.md / report.md are committed deliberately
+# -- see HISTORY.md's "Status of the committed real run" -- this only ignores
+# stray re-runs during development, e.g. the Docker quickstart's ./out volume).
+out/
+
+# Python bytecode, caches, and virtualenvs.
+*.py[cod]
+__pycache__/
+.venv/
+venv/
+
+# Python build / packaging artifacts (in case the package is ever built
+# or installed in-place).
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test-tooling caches (pytest, coverage.py, hypothesis -- all added over the
+# course of this project's review passes; none of their local state belongs
+# in the repo). ``.coverage.*`` covers coverage.py's parallel-mode data files.
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# Editor / OS cruft, so a collaborator's local tooling doesn't leak in.
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# WSL garbage
+*:Zone.Identifier
